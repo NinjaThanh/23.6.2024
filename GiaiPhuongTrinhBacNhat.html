@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   let number1= +prompt("Nhap Vao a");
+   let number2= +prompt("Nhap vao b cua phuong trinh ax +b=0");
+   let result = -number2/number1;
+   if(number1==0){
+    if(number2!==0){
+        document.write("Nhap Phuong Trinh Vo Ngiem");
+    }else {
+        document.write("Phuong Trinh Vo So Nghiem");
+    }
+   }else{
+    if(number2===0){
+        document.write("Nghiem Cua Phuong Trinh: x= vo so nghiem");
+    }else{
+               result=(-number2)/number1;
+            document.write("Nghiem Cua Phuong Trinh: x="+result);
+    }
+   }
+    </script>
+</body>
+</html>

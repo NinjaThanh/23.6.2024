@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+
+</head>
+<body>
+<h1>Xếp hạng học lực học sinh</h1>
+<label for="testScore">Nhập điểm bài kiểm tra:</label>
+<input type="number" id="testScore" name="testScore" step="0.01" min="0" max="10"><br><br>
+<label for="midtermScore">Nhập điểm thi giữa kỳ:</label>
+<input type="number" id="midtermScore" name="midtermScore" step="0.01" min="0" max="10"><br><br>
+<label for="finalExamScore">Nhập điểm thi cuối kỳ:</label>
+<input type="number" id="finalExamScore" name="finalExamScore" step="0.01" min="0" max="10"><br><br>
+<button onclick="calculateGrade()">Xếp hạng</button>
+<script>
+    function calculateGrade() {
+        let testScore = +document.getElementById("testScore").value;
+        let midtermScore = +document.etElementById("midtermScore").value;
+        let finalExamScore = +document.getElementById("finalExamScore").value;
+        let averageScore = (testScore + midtermScore + finalExamScore)/3;
+        let grade;
+
+        if (averageScore >= 8.5) {
+            grade = "Xuất sắc";
+        } else if (averageScore >= 7.0) {
+            grade = "Giỏi";
+        } else if (averageScore >= 5.5) {
+            grade = "Khá";
+        } else if (averageScore >= 4.0) {
+            grade = "Trung bình";
+        } else {
+            grade = "Yếu";
+        }
+
+        document.getElementById("result").innerHTML = "Điểm trung bình: " + averageScore.toFixed(2) + "<br> Xếp hạng học lực: " + grade;
+    }
+</script>
+<p id="result"></p>
+</body>
+</html>

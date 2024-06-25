@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra điều kiện vào học lớp 10</title>
+
+</head>
+<body>
+<h1>Kiểm tra điều kiện vào học lớp 10</h1>
+<label for="age">Nhập tuổi của học sinh:</label>
+<input type="number" id="age" name="age" min="1" max="100"><br><br>
+<button onclick="checkEligibility()">Kiểm tra</button>
+<script>
+    function checkEligibility() {
+        let age = document.getElementById("age").value;
+        let result;
+
+        if (age >= 15) {
+            result = "Học sinh đủ điều kiện vào học lớp 10.";
+        } else {
+            result = "Học sinh không đủ điều kiện vào học lớp 10.";
+        }
+
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+<p id="result"></p>
+</body>
+</html>
